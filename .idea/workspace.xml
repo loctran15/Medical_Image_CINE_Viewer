@@ -5,42 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/reader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/scene.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/record_3d_view_dialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_CINE/registration/regis_updated.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_CINE/slicer_script/slicer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Medical_Image_CINE_Viewer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Medical_Image_CINE_Viewer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/4D CTA Images (on-going).iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/CTA_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/CTA_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/source_codes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/source_codes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/coefficient_of_variance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/coefficient_of_variance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/conversion_nii_tif_mask_3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/conversion_nii_tif_mask_3d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/io_cine_dcm_to_iso_nii.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/io_cine_dcm_to_iso_nii.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/move_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/move_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/save_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/save_mask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version3.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/load_label_dialog_UI.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/Plot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/load_label_dialog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/registration/checkerboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/registration/checkerboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/registration/regis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/registration/regis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +62,7 @@
       <recent name="D:\PYTHON\src_CINE" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CINE_main (1)">
+  <component name="RunManager" selected="Python.CINE_main">
     <configuration name="Slicer remote debugger" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
       <module name="PYTHON" />
       <option name="PORT" value="5678" />
@@ -112,6 +78,27 @@
     </configuration>
     <configuration name="CINE_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/CINE_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CINE_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medical_Image_CINE_Viewer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -194,41 +181,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="example2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PYTHON" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/log_status" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/log_status/example2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.CINE_main (1)" />
       <item itemvalue="Python.example" />
-      <item itemvalue="Python.example2" />
       <item itemvalue="Python.cine_size_plot" />
       <item itemvalue="Python.MainWindow" />
+      <item itemvalue="Python.CINE_main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CINE_main" />
         <item itemvalue="Python.CINE_main (1)" />
         <item itemvalue="Python.MainWindow" />
         <item itemvalue="Python.cine_size_plot" />
         <item itemvalue="Python.example" />
-        <item itemvalue="Python.example2" />
       </list>
     </recent_temporary>
   </component>
