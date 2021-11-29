@@ -1,4 +1,6 @@
 from enum import Enum, auto
+from typing import NamedTuple
+from dataclasses import dataclass, field
 
 
 # enum
@@ -31,6 +33,22 @@ class ColorType(Enum):
     # without this == may return unexpected result
     def __eq__(self, other):
         return self.value == other.value
+
+
+@dataclass
+class Size():
+    WH: int = 0
+    AO: int = 0
+    LV: int = 0
+    LA: int = 0
+    RV: int = 0
+    RA: int = 0
+    LAA: int = 0
+    SVC: int = 0
+    IVC: int = 0
+    PA: int = 0
+    PV: int = 0
+    LVM: int = 0
 
 
 label_dict = {

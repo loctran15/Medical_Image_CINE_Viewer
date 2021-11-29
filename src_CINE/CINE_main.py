@@ -20,10 +20,12 @@ from io_image.image import Image
 from io_image.image_enum import ImageType, ImageFileType, ColorType
 from io_image.reader import ImageReader
 import imageio
+from src_CINE.Dicom_eval import cine_size_plot
 
 import cv2
 
 from pyqt_extension.load_images_dialog import LoadImagesDialog
+from src_CINE.log_status import logger
 
 from functools import partial
 
@@ -90,6 +92,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.opacity_slider.sliderReleased.connect(self.opacity_slider_released_handler)
         self.opacity_slider.setValue(10)
 
+        # size
+        self.size_plot_button.pressed.connect(self.show_size_plot_handler)
+
         # show button
         self.show_button.pressed.connect(self.loading_3d_view)
 
@@ -118,6 +123,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # log text browser
         self.status_text_browser.setReadOnly(True)
+        logger_handler = logger.QTextEditLogger(self.status_text_browser)
+        self.logger = logger.get_logger(qtlog_handler=logger_handler)
 
         # Qtimer
         self.timer = QTimer()
@@ -182,9 +189,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.camera3 = None
         self.camera4 = None
 
+    def show_size_plot_handler(self):
+        if (len(self.label_list) != 0):
+            cine_size_plot.plot(self.label_list)
+            cine_size_plot.show()
+
     def AO_checkbox_stateChanged_handler(self, state):
         if (state == 2):
             self.is_visual_dict['AO'] = True
+            self.logger.info("hello")
         else:
             self.is_visual_dict['AO'] = False
 
@@ -311,6 +324,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # choose which dialog based on ImageType
         dialog: LoadImagesDialog = LoadImagesDialog()
+        dialog.setWindowTitle("Load Label(s) dialog") if imageType == ImageType.LABEL else dialog.setWindowTitle(
+            "Load Volume(s) dialog")
 
         dialog.num_images = len(self.label_list)
 
@@ -319,6 +334,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # user's inputs
         tuple_path_list = dialog.file_list
+        if (len(tuple_path_list) == 0):
+            return
 
         paths = []
         image_file_types = []

@@ -2,17 +2,23 @@ import SimpleITK as sitk
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from typing import Protocol
 
 import os
 from pathlib import Path
 
 from .image_enum import *
 
-from typing import Protocol, Dict
-import numpy.typing as npt
 import numpy as np
 
 from src_CINE.Dicom_helper.helper_funcs import label_dict
+
+from pyqtgraph.exporters.CSVExporter import CSVExporter as BaseCSVExporter
+from pyqtgraph.graphicsItems.PlotItem import PlotItem
+from pyqtgraph.parametertree.Parameter import Parameter
+from PyQt6 import QtCore
+
+translate = QtCore.QCoreApplication.translate
 
 color_map = {
     "BOX": [255, 0, 0],
@@ -134,3 +140,74 @@ class TiffExporter(ImageExporter):
             return tiff_array
 
         raise NotImplementedError
+
+
+class CSVExporter(BaseCSVExporter):
+    Name = "modified CSV exporter"
+
+    def __init__(self, item):
+        BaseCSVExporter.__init__(self, item)
+        self.params = Parameter(name='params', type='group', children=[
+            {'name': 'separator', 'title': translate("Exporter", 'separator'), 'type': 'list', 'value': 'comma',
+             'limits': ['comma', 'tab']},
+            {'name': 'precision', 'title': translate("Exporter", 'precision'), 'type': 'int', 'value': 10,
+             'limits': [0, None]},
+            {'name': 'columnMode', 'title': translate("Exporter", 'columnMode'), 'type': 'list',
+             'limits': ['(x,y,y,y) for all plots', '(x,y) per plot']}
+        ])
+
+    def export(self, fileName=None):
+        if not isinstance(self.item, PlotItem):
+            raise Exception("Must have a PlotItem selected for CSV export.")
+
+        if fileName is None:
+            self.fileSaveDialog(filter=["*.csv", "*.tsv"])
+            return
+
+        data = []
+        header = []
+
+        appendAllX = self.params['columnMode'] == '(x,y) per plot'
+
+        for i, c in enumerate(self.item.curves):
+            cd = c.getData()
+            if cd[0] is None:
+                continue
+            data.append(cd)
+            if hasattr(c, 'implements') and c.implements('plotData') and c.name() is not None:
+                name = c.name().replace('"', '""')
+                xName, yName = '"' + "phase" + '"', '"' + name + '"'
+            else:
+                xName = 'x%04d' % i
+                yName = 'y%04d' % i
+            if appendAllX or i == 0:
+                header.extend([xName, yName])
+            else:
+                header.extend([yName])
+
+        if self.params['separator'] == 'comma':
+            sep = ','
+        else:
+            sep = '\t'
+
+        with open(fileName, 'w') as fd:
+            fd.write(sep.join(map(str, header)) + '\n')
+            i = 0
+            numFormat = '%%0.%dg' % self.params['precision']
+            numRows = max([len(d[0]) for d in data])
+            for i in range(numRows):
+                for j, d in enumerate(data):
+                    # write x value if this is the first column, or if we want
+                    # x for all rows
+                    if appendAllX or j == 0:
+                        if d is not None and i < len(d[0]):
+                            fd.write(numFormat % d[0][i] + sep)
+                        else:
+                            fd.write(' %s' % sep)
+
+                    # write y value
+                    if d is not None and i < len(d[1]):
+                        fd.write(numFormat % d[1][i] + sep)
+                    else:
+                        fd.write(' %s' % sep)
+                fd.write('\n')

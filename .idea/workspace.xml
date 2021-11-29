@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_CINE/io_image/scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/record_3d_view_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_CINE/registration/regis_updated.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_CINE/slicer_script/slicer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/4D CTA Images (on-going).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/CTA_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/CTA_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/source_codes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/.idea/source_codes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/coefficient_of_variance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/coefficient_of_variance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/conversion_nii_tif_mask_3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/conversion_nii_tif_mask_3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/io_cine_dcm_to_iso_nii.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/io_cine_dcm_to_iso_nii.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/move_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/move_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/Dicom_helper/save_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/Dicom_helper/save_mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow_version3.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/UI/load_label_dialog_UI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/Plot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/load_label_dialog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/registration/checkerboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/registration/checkerboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/registration/regis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/registration/regis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JupyterTrust" id="ee210e76-161a-40cd-ac73-5427672e9b43" />
+  <component name="ProjectId" id="1rlAlkGMgi3lsLZ0UopcFAzaLZJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="format.on.save" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PYTHON\src_DeepHeart\chkpt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src_CINE/pyqt_extension" />
+      <recent name="D:\PYTHON\src_CINE\slicer_script" />
+      <recent name="D:\PYTHON\src_CINE" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.CINE_main (1)">
+    <configuration name="Slicer remote debugger" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
+      <module name="PYTHON" />
+      <option name="PORT" value="5678" />
+      <option name="HOST" value="localhost" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list />
+        </option>
+      </PathMappingSettings>
+      <option name="REDIRECT_OUTPUT" value="true" />
+      <option name="SUSPEND_AFTER_CONNECT" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CINE_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/CINE_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/UI/MainWindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cine_size_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/Dicom_eval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/log_status" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/log_status/example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/log_status" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/log_status/example2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.CINE_main (1)" />
+      <item itemvalue="Python.example" />
+      <item itemvalue="Python.example2" />
+      <item itemvalue="Python.cine_size_plot" />
+      <item itemvalue="Python.MainWindow" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.CINE_main (1)" />
+        <item itemvalue="Python.MainWindow" />
+        <item itemvalue="Python.cine_size_plot" />
+        <item itemvalue="Python.example" />
+        <item itemvalue="Python.example2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="" />
+      <created>1619540457675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619540457675</updated>
+      <workItem from="1619540459316" duration="18693000" />
+      <workItem from="1619624186481" duration="2000" />
+      <workItem from="1619624452989" duration="26527000" />
+      <workItem from="1619706264217" duration="21693000" />
+      <workItem from="1619757563217" duration="537000" />
+      <workItem from="1619758120592" duration="332000" />
+      <workItem from="1619758473452" duration="739000" />
+      <workItem from="1619759474360" duration="332000" />
+      <workItem from="1619759822488" duration="446000" />
+      <workItem from="1619760296699" duration="481000" />
+      <workItem from="1619760939660" duration="283000" />
+      <workItem from="1619761235811" duration="198000" />
+      <workItem from="1619778930789" duration="1005000" />
+      <workItem from="1619779961926" duration="525000" />
+      <workItem from="1619780505120" duration="1097000" />
+      <workItem from="1619784143114" duration="186000" />
+      <workItem from="1619784343270" duration="23662000" />
+      <workItem from="1620337125100" duration="19999000" />
+      <workItem from="1620416184187" duration="78026000" />
+      <workItem from="1620709360627" duration="34372000" />
+      <workItem from="1620915617827" duration="132011000" />
+      <workItem from="1621556688483" duration="16163000" />
+      <workItem from="1621596602426" duration="75018000" />
+      <workItem from="1622296894106" duration="17562000" />
+      <workItem from="1622506379308" duration="93807000" />
+      <workItem from="1623638371802" duration="7310000" />
+      <workItem from="1623670939393" duration="35595000" />
+      <workItem from="1624051708888" duration="19621000" />
+      <workItem from="1624282069178" duration="35784000" />
+      <workItem from="1624387773326" duration="24995000" />
+      <workItem from="1624498158049" duration="5939000" />
+      <workItem from="1624534587475" duration="38000" />
+      <workItem from="1624534639216" duration="3403000" />
+      <workItem from="1624539588098" duration="508000" />
+      <workItem from="1624540199234" duration="58183000" />
+      <workItem from="1625017663521" duration="42000" />
+      <workItem from="1625017752446" duration="62463000" />
+      <workItem from="1626445580012" duration="6102000" />
+      <workItem from="1626794776501" duration="1636000" />
+      <workItem from="1626964958080" duration="20000" />
+      <workItem from="1626965005463" duration="19426000" />
+      <workItem from="1627650787142" duration="42585000" />
+      <workItem from="1628540222788" duration="5616000" />
+      <workItem from="1628548650202" duration="2496000" />
+      <workItem from="1628600352554" duration="60512000" />
+      <workItem from="1628888170479" duration="3419000" />
+      <workItem from="1628891606702" duration="2142000" />
+      <workItem from="1628896085424" duration="13084000" />
+      <workItem from="1629143697319" duration="16612000" />
+      <workItem from="1629226658640" duration="14942000" />
+      <workItem from="1629307571163" duration="76179000" />
+      <workItem from="1631120068306" duration="786000" />
+      <workItem from="1633360601461" duration="1472000" />
+      <workItem from="1633444670646" duration="7962000" />
+      <workItem from="1634050009953" duration="762000" />
+      <workItem from="1635303533823" duration="2131000" />
+      <workItem from="1635868697806" duration="1327000" />
+      <workItem from="1635870602819" duration="2529000" />
+      <workItem from="1635873936890" duration="12569000" />
+      <workItem from="1636032017473" duration="564000" />
+      <workItem from="1636034811102" duration="288000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/size_updated.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/size_updated.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CMACS/main_CL_CINE.py</url>
+          <line>711</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_DeepHeart/infer.py</url>
+          <line>516</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_helper/save_mask.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_helper/dcm_reader.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/lib/python3.9/site-packages/pyqtgraph/exporters/Exporter.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/log_status/example2.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/log_status/example.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/CINE_main.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src_CINE/io_image/image.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

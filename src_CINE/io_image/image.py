@@ -80,6 +80,18 @@ class Image:
     def color(self) -> Optional[ColorType]:
         return None
 
+    @property
+    def size(self) -> Optional[Size]:
+        sz = Size()
+        if self.imageType == ImageType.GRAYSCALE:
+            return None
+        else:
+            for key in RGB_color_dict.keys():
+                z, _, _ = np.where(self.array_data == label_dict[key])
+                setattr(sz, key, len(z))
+
+            return sz
+
     def export(self, out_path: str, file_name: str, out_type: ImageFileType):
         if (out_type == ImageFileType.DICOM):
             exporter = ImageExporter(image=self, out_path=out_path, file_name=file_name, out_type=out_type)
