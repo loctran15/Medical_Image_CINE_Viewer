@@ -31,6 +31,7 @@ class Image:
     phase: Optional[int] = field(default=None)
     RGBA_data: Optional[np.ndarray] = field(default=None, repr=False)
     image3DScene: Optional[Image3DScene] = field(default=None, repr=False, init=False)
+    _size: Optional[Image3DScene] = field(default=None, repr=False, init=False)
 
     def __post_init__(self):
         self.path = os.path.normpath(self.path)
@@ -80,17 +81,21 @@ class Image:
     def color(self) -> Optional[ColorType]:
         return None
 
+    # TODO: correct size of WH
     @property
     def size(self) -> Optional[Size]:
-        sz = Size()
-        if self.imageType == ImageType.GRAYSCALE:
-            return None
+        if (self._size is not None):
+            return self._size
         else:
-            for key in RGB_color_dict.keys():
-                z, _, _ = np.where(self.array_data == label_dict[key])
-                setattr(sz, key, len(z))
+            self._size = Size()
+            if self.imageType == ImageType.GRAYSCALE:
+                return None
+            else:
+                for key in RGB_color_dict.keys():
+                    z, _, _ = np.where(self.array_data == label_dict[key])
+                    setattr(self._size, key, len(z))
 
-            return sz
+                return self._size
 
     def export(self, out_path: str, file_name: str, out_type: ImageFileType):
         if (out_type == ImageFileType.DICOM):

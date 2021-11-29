@@ -11,6 +11,7 @@
       <change afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/record_3d_view_dialog.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src_CINE/registration/regis_updated.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src_CINE/slicer_script/slicer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_CINE/.idea/4D CTA Images (on-going).iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src_CINE/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src_CINE/.idea/misc.xml" beforeDir="false" />
@@ -353,18 +354,8 @@
           <option name="timeStamp" value="152" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src_CINE/log_status/example2.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src_CINE/log_status/example.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py</url>
-          <line>94</line>
+          <line>105</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -376,16 +367,6 @@
           <url>file://$PROJECT_DIR$/src_CINE/Dicom_eval/cine_size_plot.py</url>
           <line>40</line>
           <option name="timeStamp" value="166" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src_CINE/CINE_main.py</url>
-          <line>193</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src_CINE/io_image/image.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="169" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
