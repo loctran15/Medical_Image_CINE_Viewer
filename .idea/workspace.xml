@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Medical_Image_CINE_Viewer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Medical_Image_CINE_Viewer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/CTA_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
       <recent name="D:\PYTHON\src_CINE" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CINE_main">
+  <component name="RunManager" selected="Python.CINE_main (2)">
     <configuration name="Slicer remote debugger" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
       <module name="PYTHON" />
       <option name="PORT" value="5678" />
@@ -78,6 +83,27 @@
     </configuration>
     <configuration name="CINE_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/CINE_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CINE_main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medical_Image_CINE_Viewer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -160,41 +186,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PYTHON" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/log_status" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/log_status/example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.CINE_main (1)" />
-      <item itemvalue="Python.example" />
       <item itemvalue="Python.cine_size_plot" />
       <item itemvalue="Python.MainWindow" />
       <item itemvalue="Python.CINE_main" />
+      <item itemvalue="Python.CINE_main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CINE_main (2)" />
         <item itemvalue="Python.CINE_main" />
         <item itemvalue="Python.CINE_main (1)" />
         <item itemvalue="Python.MainWindow" />
         <item itemvalue="Python.cine_size_plot" />
-        <item itemvalue="Python.example" />
       </list>
     </recent_temporary>
   </component>
