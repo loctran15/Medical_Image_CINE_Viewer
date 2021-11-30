@@ -45,15 +45,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.view_1.setLayout(QVBoxLayout())
         self.view_1_scroll_bar.valueChanged.connect(self.view_1_scroll_bar_valueChanged_handler)
         self.view_1.layout().addWidget(self.canvas1.native)
-        self.canvas1.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
-        self.canvas1.horizon_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
+        # self.canvas1.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
+        # self.canvas1.horizon_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
         # view 2
         self.canvas2 = Edited_Canvas(keys='interactive', size=(500, 400), show=True)
         self.view_2.setLayout(QVBoxLayout())
         self.view_2_scroll_bar.valueChanged.connect(self.view_2_scroll_bar_valueChanged_handler)
         self.view_2.layout().addWidget(self.canvas2.native)
-        self.canvas2.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
-        self.canvas2.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
+        # self.canvas2.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
+        # self.canvas2.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
         # view 3
         self.canvas3 = scene.SceneCanvas(keys='interactive', size=(500, 400), show=True)
         self.view_3.setLayout(QVBoxLayout())
@@ -63,8 +63,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.view_4.setLayout(QVBoxLayout())
         self.view_4_scroll_bar.valueChanged.connect(self.view_4_scroll_bar_valueChanged_handler)
         self.view_4.layout().addWidget(self.canvas4.native)
-        self.canvas4.vertical_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
-        self.canvas4.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
+        # self.canvas4.vertical_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
+        # self.canvas4.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
 
         # set up 3d_view
         # play_LCD_number
@@ -454,7 +454,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                                parent=self.viewbox1.scene)
                 self.gray_scale_viewbox1.visible = True
 
-                self.canvas1.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[2] - 1)
+                # self.canvas1.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[2] - 1)
                 self.view_1_scroll_bar.setMinimum(0)
                 self.view_1_scroll_bar.setMaximum(grayscale_image.shape[0] - 1)
             if (label_image):
@@ -462,7 +462,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                           parent=self.viewbox1.scene)
                 self.label_viewbox1.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox1.visible = True
-                self.canvas1.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[2] - 1)
+                # self.canvas1.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[2] - 1)
                 self.view_1_scroll_bar.setMinimum(0)
                 self.view_1_scroll_bar.setMaximum(label_image.shape[0] - 1)
 
@@ -526,7 +526,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                                parent=self.viewbox2.scene)
                 self.gray_scale_viewbox2.visible = True
 
-                self.canvas2.set_limit(0, grayscale_image.shape[2] - 1, 0, grayscale_image.shape[0] - 1)
+                # self.canvas2.set_limit(0, grayscale_image.shape[2] - 1, 0, grayscale_image.shape[0] - 1)
                 self.view_2_scroll_bar.setMinimum(0)
                 self.view_2_scroll_bar.setMaximum(grayscale_image.shape[1] - 1)
             if (label_image):
@@ -534,7 +534,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                           parent=self.viewbox2.scene)
                 self.label_viewbox2.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox2.visible = True
-                self.canvas2.set_limit(0, label_image.shape[2] - 1, 0, label_image.shape[0] - 1)
+                # self.canvas2.set_limit(0, label_image.shape[2] - 1, 0, label_image.shape[0] - 1)
                 self.view_2_scroll_bar.setMinimum(0)
                 self.view_2_scroll_bar.setMaximum(label_image.shape[1] - 1)
 
@@ -596,7 +596,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                                parent=self.viewbox4.scene)
                 self.gray_scale_viewbox4.visible = True
 
-                self.canvas4.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[0] - 1)
+                # self.canvas4.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[0] - 1)
                 self.view_4_scroll_bar.setMinimum(0)
                 self.view_4_scroll_bar.setMaximum(grayscale_image.shape[2] - 1)
             if (label_image):
@@ -604,7 +604,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                           parent=self.viewbox4.scene)
                 self.label_viewbox4.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox4.visible = True
-                self.canvas4.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[0] - 1)
+                # self.canvas4.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[0] - 1)
                 self.view_4_scroll_bar.setMinimum(0)
                 self.view_4_scroll_bar.setMaximum(label_image.shape[2] - 1)
 
@@ -686,8 +686,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_1(value, volume_image, label_image, is_reload=False)
-        self.canvas2.set_horizon_pos(value)
-        self.canvas4.set_horizon_pos(value)
+        # self.canvas2.set_horizon_pos(value)
+        # self.canvas4.set_horizon_pos(value)
 
     def view_2_scroll_bar_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have
@@ -698,8 +698,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_2(value, volume_image, label_image, is_reload=False)
-        self.canvas1.set_horizon_pos(value)
-        self.canvas4.set_horizon_pos(value)
+        # self.canvas1.set_horizon_pos(value)
+        # self.canvas4.set_horizon_pos(value)
 
     def view_4_scroll_bar_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have
@@ -710,8 +710,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_4(value, volume_image, label_image, is_reload=False)
-        self.canvas1.set_horizon_pos(value)
-        self.canvas2.set_horizon_pos(value)
+        # self.canvas1.set_horizon_pos(value)
+        # self.canvas2.set_horizon_pos(value)
 
     def view_3_slider_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have

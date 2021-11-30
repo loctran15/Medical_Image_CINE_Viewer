@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/modified_canvas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/CTA_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/file_loader/file_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/slicer_script/slicer_deformation_field.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/CINE_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/CINE_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/log_file.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
