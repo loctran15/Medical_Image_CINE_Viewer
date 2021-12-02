@@ -7,8 +7,7 @@
     <list default="true" id="168265cd-a5c2-4626-99aa-193c367c656f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_CINE/CINE_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/CINE_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/UI/MainWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_CINE/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/UI/MainWindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_CINE/log_file.log" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/log_file.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <recent name="D:\PYTHON\src_CINE" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CINE_main">
+  <component name="RunManager" selected="Python.CINE_main (1)">
     <configuration name="Slicer remote debugger" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
       <module name="PYTHON" />
       <option name="PORT" value="5678" />
@@ -77,6 +76,27 @@
       </PathMappingSettings>
       <option name="REDIRECT_OUTPUT" value="true" />
       <option name="SUSPEND_AFTER_CONNECT" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CINE_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medical_Image_CINE_Viewer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/CINE_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="CINE_main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -142,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="line" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medical_Image_CINE_Viewer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,28 +174,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/pyqt_extension/line.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="modified_canvas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medical_Image_CINE_Viewer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_CINE/pyqt_extension" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/pyqt_extension/modified_canvas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_CINE/pyqt_extension/example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,19 +184,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.modified_canvas" />
       <item itemvalue="Python.CINE_main (3)" />
-      <item itemvalue="Python.line" />
       <item itemvalue="Python.MainWindow" />
       <item itemvalue="Python.CINE_main" />
+      <item itemvalue="Python.CINE_main (1)" />
+      <item itemvalue="Python.example" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CINE_main (1)" />
+        <item itemvalue="Python.example" />
         <item itemvalue="Python.CINE_main" />
         <item itemvalue="Python.MainWindow" />
         <item itemvalue="Python.CINE_main (3)" />
-        <item itemvalue="Python.line" />
-        <item itemvalue="Python.modified_canvas" />
       </list>
     </recent_temporary>
   </component>

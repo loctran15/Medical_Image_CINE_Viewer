@@ -45,15 +45,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.view_1.setLayout(QVBoxLayout())
         self.view_1_scroll_bar.valueChanged.connect(self.view_1_scroll_bar_valueChanged_handler)
         self.view_1.layout().addWidget(self.canvas1.native)
-        # self.canvas1.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
-        # self.canvas1.horizon_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
         # view 2
         self.canvas2 = Edited_Canvas(keys='interactive', size=(500, 400), show=True)
         self.view_2.setLayout(QVBoxLayout())
         self.view_2_scroll_bar.valueChanged.connect(self.view_2_scroll_bar_valueChanged_handler)
         self.view_2.layout().addWidget(self.canvas2.native)
-        # self.canvas2.vertical_line_moved_signal.connect(self.view_4_scroll_bar.setValue)
-        # self.canvas2.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
         # view 3
         self.canvas3 = scene.SceneCanvas(keys='interactive', size=(500, 400), show=True)
         self.view_3.setLayout(QVBoxLayout())
@@ -212,13 +208,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.view_2_scroll_bar.setValue(x)
             self.view_4_scroll_bar.setValue(y)
         elif (scene_canvas_id == str(id(self.canvas2))):
-            self.view_1_scroll_bar.setValue(x)
+            self.view_1_scroll_bar.setValue(y)
             self.view_2_scroll_bar.setValue(self.view_2_scroll_bar.value())
-            self.view_4_scroll_bar.setValue(y)
+            self.view_4_scroll_bar.setValue(x)
         elif (scene_canvas_id == str(id(self.canvas4))):
-            self.view_1_scroll_bar.setValue(x)
-            self.view_2_scroll_bar.setValue(y)
-            self.view_4_scroll_bar.setValue(self.view_2_scroll_bar.value())
+            self.view_1_scroll_bar.setValue(y)
+            self.view_2_scroll_bar.setValue(x)
+            self.view_4_scroll_bar.setValue(self.view_4_scroll_bar.value())
 
     def update_coordinate(self):
         """
@@ -227,7 +223,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         update x,y,z coor
         """
         # change horizontal line and vertical line of each canvas based on value of the scroll bars
+        self.canvas1.vertical_line.set_data(self.view_2_scroll_bar.value())
+        self.canvas1.horizontal_line.set_data(self.view_4_scroll_bar.value())
+        self.canvas1.vertical_line.update()
+        self.canvas1.horizontal_line.update()
 
+        self.canvas2.vertical_line.set_data(self.view_4_scroll_bar.value())
+        self.canvas2.horizontal_line.set_data(self.view_1_scroll_bar.value())
+        self.canvas2.vertical_line.update()
+        self.canvas2.horizontal_line.update()
+
+        self.canvas4.vertical_line.set_data(self.view_2_scroll_bar.value())
+        self.canvas4.horizontal_line.set_data(self.view_1_scroll_bar.value())
+        self.canvas4.vertical_line.update()
+        self.canvas4.horizontal_line.update()
         # update x,y,z coord
         self.x_tracking_LCD_number.display(self.view_2_scroll_bar.value() + 1)
         self.y_tracking_LCD_number.display(self.view_4_scroll_bar.value() + 1)
@@ -247,13 +256,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if (label):
                 self.label_tracking_LCD_number.display(
                     label.array_data[
-                        int(self.view_1_scroll_bar.value()), int(self.view_2_scroll_bar.value()), int(
-                            self.view_4_scroll_bar.value())])
+                        int(self.view_1_scroll_bar.value()), int(self.view_4_scroll_bar.value()), int(
+                            self.view_2_scroll_bar.value())])
             if (volume):
                 self.intensity_tracking_LCD_number.display(
                     volume.array_data[
-                        int(self.view_1_scroll_bar.value()), int(self.view_2_scroll_bar.value()), int(
-                            self.view_4_scroll_bar.value())])
+                        int(self.view_1_scroll_bar.value()), int(self.view_4_scroll_bar.value()), int(
+                            self.view_2_scroll_bar.value())])
 
     def show_size_plot_handler(self):
         if (len(self.label_list) != 0):
@@ -263,7 +272,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def AO_checkbox_stateChanged_handler(self, state):
         if (state == 2):
             self.is_visual_dict['AO'] = True
-            self.logger.info("hello")
+            self.logger.info("hello info")
+            self.logger.debug("hello debug")
         else:
             self.is_visual_dict['AO'] = False
 
@@ -489,6 +499,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.view_1_scroll_bar.setValue(frame_index_view_1)
             self.view_2_scroll_bar.setValue(frame_index_view_2)
             self.view_4_scroll_bar.setValue(frame_index_view_4)
+
+        self.update_label_intensity_values()
 
     def show_view_1(self, frame_index: int, grayscale_image: Optional[Image] = None,
                     label_image: Optional[Image] = None,
