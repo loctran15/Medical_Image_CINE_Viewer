@@ -206,7 +206,7 @@
        <rect>
         <x>0</x>
         <y>310</y>
-        <width>251</width>
+        <width>262</width>
         <height>25</height>
        </rect>
       </property>
@@ -364,7 +364,7 @@
        <rect>
         <x>0</x>
         <y>390</y>
-        <width>251</width>
+        <width>263</width>
         <height>25</height>
        </rect>
       </property>
@@ -387,7 +387,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="y_tracking_LCD_number_2"/>
+        <widget class="QLCDNumber" name="y_tracking_LCD_number"/>
        </item>
        <item>
         <widget class="QLabel" name="z_tracking_label">
@@ -400,6 +400,12 @@
         <widget class="QLCDNumber" name="z_tracking_LCD_number"/>
        </item>
       </layout>
+      <zorder>x_tracking_label</zorder>
+      <zorder>y_tracking_label</zorder>
+      <zorder>y_tracking_LCD_number</zorder>
+      <zorder>z_tracking_label</zorder>
+      <zorder>z_tracking_LCD_number</zorder>
+      <zorder>x_tracking_LCD_number</zorder>
      </widget>
      <widget class="QWidget" name="layoutWidget_4">
       <property name="geometry">

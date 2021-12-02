@@ -63,8 +63,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.view_4.setLayout(QVBoxLayout())
         self.view_4_scroll_bar.valueChanged.connect(self.view_4_scroll_bar_valueChanged_handler)
         self.view_4.layout().addWidget(self.canvas4.native)
-        # self.canvas4.vertical_line_moved_signal.connect(self.view_2_scroll_bar.setValue)
-        # self.canvas4.horizon_line_moved_signal.connect(self.view_1_scroll_bar.setValue)
+
+        # canvas mouse pressed handler
+        self.canvas1.mouse_pressed_signal.connect(self.mouse_pressed_canvas_handler)
+        self.canvas2.mouse_pressed_signal.connect(self.mouse_pressed_canvas_handler)
+        self.canvas4.mouse_pressed_signal.connect(self.mouse_pressed_canvas_handler)
 
         # set up 3d_view
         # play_LCD_number
@@ -91,6 +94,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.opacity_slider.valueChanged.connect(self.opacity_slider_valueChanged_handler)
         self.opacity_slider.sliderReleased.connect(self.opacity_slider_released_handler)
         self.opacity_slider.setValue(10)
+
+        # Label, intensity LCD
+        self.label_tracking_LCD_number.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.intensity_tracking_LCD_number.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+
+        # x,y,z coor LCD
+        self.x_tracking_LCD_number.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.y_tracking_LCD_number.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.z_tracking_LCD_number.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         # size
         self.size_plot_button.pressed.connect(self.show_size_plot_handler)
@@ -188,6 +200,60 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.camera2 = None
         self.camera3 = None
         self.camera4 = None
+
+    def mouse_pressed_canvas_handler(self, scene_canvas_id, x, y) -> None:
+        """
+        :param scene_canvas: the canvas emit the signal
+        :param position: x,y coordinates of the position where the mouse pressed
+        :return: None
+        """
+        if (scene_canvas_id == str(id(self.canvas1))):
+            self.view_1_scroll_bar.setValue(self.view_1_scroll_bar.value())
+            self.view_2_scroll_bar.setValue(x)
+            self.view_4_scroll_bar.setValue(y)
+        elif (scene_canvas_id == str(id(self.canvas2))):
+            self.view_1_scroll_bar.setValue(x)
+            self.view_2_scroll_bar.setValue(self.view_2_scroll_bar.value())
+            self.view_4_scroll_bar.setValue(y)
+        elif (scene_canvas_id == str(id(self.canvas4))):
+            self.view_1_scroll_bar.setValue(x)
+            self.view_2_scroll_bar.setValue(y)
+            self.view_4_scroll_bar.setValue(self.view_2_scroll_bar.value())
+
+    def update_coordinate(self):
+        """
+        change horizontal line and vertical line of each canvas based on value of the scroll bars
+        scroll bars are used to change x,y,z coordinates, horizontal and vertical lines
+        update x,y,z coor
+        """
+        # change horizontal line and vertical line of each canvas based on value of the scroll bars
+
+        # update x,y,z coord
+        self.x_tracking_LCD_number.display(self.view_2_scroll_bar.value() + 1)
+        self.y_tracking_LCD_number.display(self.view_4_scroll_bar.value() + 1)
+        self.z_tracking_LCD_number.display(self.view_1_scroll_bar.value() + 1)
+
+        self.update_label_intensity_values()
+
+    def update_label_intensity_values(self):
+        """
+        update label and intensity based on the scroll bars
+        :return: None
+        """
+        if (len(self.volume_list) or len(self.label_list)):
+            volume = self.volume_list[self.current_phase_index]
+            label = self.label_list[self.current_phase_index]
+            # update label and intensity value
+            if (label):
+                self.label_tracking_LCD_number.display(
+                    label.array_data[
+                        int(self.view_1_scroll_bar.value()), int(self.view_2_scroll_bar.value()), int(
+                            self.view_4_scroll_bar.value())])
+            if (volume):
+                self.intensity_tracking_LCD_number.display(
+                    volume.array_data[
+                        int(self.view_1_scroll_bar.value()), int(self.view_2_scroll_bar.value()), int(
+                            self.view_4_scroll_bar.value())])
 
     def show_size_plot_handler(self):
         if (len(self.label_list) != 0):
@@ -454,7 +520,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                                parent=self.viewbox1.scene)
                 self.gray_scale_viewbox1.visible = True
 
-                # self.canvas1.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[2] - 1)
                 self.view_1_scroll_bar.setMinimum(0)
                 self.view_1_scroll_bar.setMaximum(grayscale_image.shape[0] - 1)
             if (label_image):
@@ -462,7 +527,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                           parent=self.viewbox1.scene)
                 self.label_viewbox1.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox1.visible = True
-                # self.canvas1.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[2] - 1)
                 self.view_1_scroll_bar.setMinimum(0)
                 self.view_1_scroll_bar.setMaximum(label_image.shape[0] - 1)
 
@@ -521,30 +585,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 print("label and volume shape mismatch!")
                 return
             if (grayscale_image):
-                self.gray_scale_viewbox2 = scene.visuals.Image(grayscale_image.array_data[:, frame_index, :],
+                self.gray_scale_viewbox2 = scene.visuals.Image(grayscale_image.array_data[:, :, frame_index],
                                                                cmap="grays",
                                                                parent=self.viewbox2.scene)
                 self.gray_scale_viewbox2.visible = True
-
-                # self.canvas2.set_limit(0, grayscale_image.shape[2] - 1, 0, grayscale_image.shape[0] - 1)
                 self.view_2_scroll_bar.setMinimum(0)
                 self.view_2_scroll_bar.setMaximum(grayscale_image.shape[1] - 1)
             if (label_image):
-                self.label_viewbox2 = scene.visuals.Image(label_image.RGBA_data[:, frame_index, :],
+                self.label_viewbox2 = scene.visuals.Image(label_image.RGBA_data[:, :, frame_index],
                                                           parent=self.viewbox2.scene)
                 self.label_viewbox2.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox2.visible = True
-                # self.canvas2.set_limit(0, label_image.shape[2] - 1, 0, label_image.shape[0] - 1)
                 self.view_2_scroll_bar.setMinimum(0)
                 self.view_2_scroll_bar.setMaximum(label_image.shape[1] - 1)
 
             camera = scene.PanZoomCamera(aspect=1)
-            camera.flip = (0, 1, 0)
+            camera.flip = (0, 0, 0)
             camera.zoom(200, center=(0.05, 0.2))
             self.canvas2.set_camera(camera)
         else:
             if (label_image):
-                self.label_viewbox2.set_data(label_image.RGBA_data[:, frame_index, :])
+                self.label_viewbox2.set_data(label_image.RGBA_data[:, :, frame_index])
                 self.label_viewbox2.update()
                 if (not self.label_viewbox2.visible):
                     self.label_viewbox2.visible = True
@@ -555,7 +616,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if (grayscale_image):
                 max_value = np.max(grayscale_image.array_data)
                 min_value = np.min(grayscale_image.array_data)
-                self.gray_scale_viewbox2.set_data(grayscale_image.array_data[:, frame_index, :])
+                self.gray_scale_viewbox2.set_data(grayscale_image.array_data[:, :, frame_index])
                 self.gray_scale_viewbox2.clim = (min_value, max_value)
                 self.gray_scale_viewbox2.update()
                 if (not self.gray_scale_viewbox2.visible):
@@ -591,30 +652,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 print("label and volume shape mismatch!")
                 return
             if (grayscale_image):
-                self.gray_scale_viewbox4 = scene.visuals.Image(grayscale_image.array_data[:, :, frame_index],
+                self.gray_scale_viewbox4 = scene.visuals.Image(grayscale_image.array_data[:, frame_index, :],
                                                                cmap="grays",
                                                                parent=self.viewbox4.scene)
                 self.gray_scale_viewbox4.visible = True
-
-                # self.canvas4.set_limit(0, grayscale_image.shape[1] - 1, 0, grayscale_image.shape[0] - 1)
                 self.view_4_scroll_bar.setMinimum(0)
                 self.view_4_scroll_bar.setMaximum(grayscale_image.shape[2] - 1)
             if (label_image):
-                self.label_viewbox4 = scene.visuals.Image(label_image.RGBA_data[:, :, frame_index],
+                self.label_viewbox4 = scene.visuals.Image(label_image.RGBA_data[:, frame_index, :],
                                                           parent=self.viewbox4.scene)
                 self.label_viewbox4.transform = visuals.transforms.STTransform(translate=(0, 0, -0.5))
                 self.label_viewbox4.visible = True
-                # self.canvas4.set_limit(0, label_image.shape[1] - 1, 0, label_image.shape[0] - 1)
                 self.view_4_scroll_bar.setMinimum(0)
                 self.view_4_scroll_bar.setMaximum(label_image.shape[2] - 1)
 
             camera = scene.PanZoomCamera(aspect=1)
-            camera.flip = (0, 1, 0)
+            camera.flip = (0, 0, 0)
             camera.zoom(200, center=(0.05, 0.2))
             self.canvas4.set_camera(camera)
         else:
             if (label_image):
-                self.label_viewbox4.set_data(label_image.RGBA_data[:, :, frame_index])
+                self.label_viewbox4.set_data(label_image.RGBA_data[:, frame_index, :])
                 self.label_viewbox4.update()
                 if (not self.label_viewbox4.visible):
                     self.label_viewbox4.visible = True
@@ -625,7 +683,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if (grayscale_image):
                 max_value = np.max(grayscale_image.array_data)
                 min_value = np.min(grayscale_image.array_data)
-                self.gray_scale_viewbox4.set_data(grayscale_image.array_data[:, :, frame_index])
+                self.gray_scale_viewbox4.set_data(grayscale_image.array_data[:, frame_index, :])
                 self.gray_scale_viewbox4.clim = (min_value, max_value)
                 self.gray_scale_viewbox4.update()
                 if (not self.gray_scale_viewbox4.visible):
@@ -686,8 +744,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_1(value, volume_image, label_image, is_reload=False)
-        # self.canvas2.set_horizon_pos(value)
-        # self.canvas4.set_horizon_pos(value)
+        self.update_coordinate()
 
     def view_2_scroll_bar_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have
@@ -698,8 +755,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_2(value, volume_image, label_image, is_reload=False)
-        # self.canvas1.set_horizon_pos(value)
-        # self.canvas4.set_horizon_pos(value)
+        self.update_coordinate()
 
     def view_4_scroll_bar_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have
@@ -710,8 +766,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_image = self.label_list[self.current_phase_index]
         volume_image = self.volume_list[self.current_phase_index]
         self.show_view_4(value, volume_image, label_image, is_reload=False)
-        # self.canvas1.set_horizon_pos(value)
-        # self.canvas2.set_horizon_pos(value)
+        self.update_coordinate()
 
     def view_3_slider_valueChanged_handler(self, value):
         # if there is no data loaded into the software, the movement of slider does not have
