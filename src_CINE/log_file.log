@@ -1,1 +1,13 @@
 2021-11-30 13:55:22,444 - [CINE_main.py:200] - INFO - hello
+2021-12-02 15:34:10,945 - [CINE_main.py:273] - INFO - hello info
+2021-12-02 15:34:10,947 - [CINE_main.py:274] - DEBUG - hello debug
+2021-12-02 17:18:00,654 - [CINE_main.py:275] - INFO - hello info
+2021-12-02 17:18:00,654 - [CINE_main.py:276] - DEBUG - hello debug
+2021-12-02 17:18:01,020 - [CINE_main.py:275] - INFO - hello info
+2021-12-02 17:18:01,020 - [CINE_main.py:276] - DEBUG - hello debug
+2021-12-02 17:18:01,877 - [CINE_main.py:275] - INFO - hello info
+2021-12-02 17:18:01,877 - [CINE_main.py:276] - DEBUG - hello debug
+2021-12-02 17:18:02,540 - [CINE_main.py:275] - INFO - hello info
+2021-12-02 17:18:02,540 - [CINE_main.py:276] - DEBUG - hello debug
+2021-12-02 17:18:02,956 - [CINE_main.py:275] - INFO - hello info
+2021-12-02 17:18:02,956 - [CINE_main.py:276] - DEBUG - hello debug
