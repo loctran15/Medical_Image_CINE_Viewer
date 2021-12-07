@@ -12,7 +12,6 @@ from vispy.scene.widgets.viewbox import ViewBox
 from typing import Tuple, Union, Dict, Optional, Any
 from vispy.visuals.isosurface import IsosurfaceVisual
 from vispy.scene.visuals import Isosurface
-from vispy.visuals.filters import ShadingFilter
 
 import numpy as np
 
@@ -258,11 +257,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     label.array_data[
                         int(self.view_1_scroll_bar.value()), int(self.view_4_scroll_bar.value()), int(
                             self.view_2_scroll_bar.value())])
+            else:
+                self.label_tracking_LCD_number.display(0)
             if (volume):
                 self.intensity_tracking_LCD_number.display(
                     volume.array_data[
                         int(self.view_1_scroll_bar.value()), int(self.view_4_scroll_bar.value()), int(
                             self.view_2_scroll_bar.value())])
+            else:
+                self.intensity_tracking_LCD_number.display(0)
 
     def show_size_plot_handler(self):
         if (len(self.label_list) != 0):

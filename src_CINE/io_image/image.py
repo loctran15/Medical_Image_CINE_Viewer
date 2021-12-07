@@ -7,7 +7,6 @@ import numpy.typing as npt
 import SimpleITK as sitk
 from pydicom.dataset import Dataset
 import numpy as np
-from numba import jit
 
 import os
 from pathlib import Path
