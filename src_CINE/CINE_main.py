@@ -865,6 +865,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def record_3d_view(self):
         """
+        
         record video of the 3d scene
         Returns: None
 
