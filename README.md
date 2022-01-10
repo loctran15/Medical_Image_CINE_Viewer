@@ -2,15 +2,15 @@
 An application that displays 4D (3d + time) cardiac CT images and quickly shows statistical reports for analyzing heart movement over the period of time
 
 ## Built with
-- [Vispy](https://github.com/vispy/vispy)
-_ [Pyqt](https://www.riverbankcomputing.com/static/Docs/PyQt6)
+- [Vispy](https://github.com/vispy/vispy): high-performance interactive 2D/3D data visualization library
+- [Pyqt](https://www.riverbankcomputing.com/static/Docs/PyQt6): widget toolkit for creating graphical user interfaces
 
 ## Features
 
-_ display images in 4D (3D + time) and 3 different planes: the axial, sagittal, and coronal planes
-_ Works with Nifti, Tiff, and CT images
-_ Drag/Drop features for loading volume or label images
-_ Generate statistical reports (size, and correlation of variation)
+- display images in 4D (3D + time) and 3 different planes: the axial, sagittal, and coronal planes
+- Works with Nifti, Tiff, and CT images
+- Drag/Drop features for loading volume or label images
+- Generate statistical reports (size, and correlation of variation)
 
 ## Getting Started
 
