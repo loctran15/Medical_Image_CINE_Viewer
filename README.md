@@ -1,4 +1,4 @@
-<h1>BookZ</h1>
+<h1>Medical Image CINE Viewer</h1>
 An application that displays 4D (3d + time) cardiac CT images and quickly shows statistical reports for analyzing heart movement over the period of time
 
 ## Built with
