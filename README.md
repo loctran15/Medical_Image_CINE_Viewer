@@ -8,9 +8,12 @@ An application that displays 4D (3d + time) cardiac CT images and quickly shows 
 ## Features
 
 - display images in 4D (3D + time) and 3 different planes: the axial, sagittal, and coronal planes
+![Alt Text](https://github.com/loctran15/Medical_Image_CINE_Viewer/blob/main/gif/image-display.gif)
 - Works with Nifti, Tiff, and CT images
 - Drag/Drop features for loading volume or label images
+![Alt Text](https://github.com/loctran15/Medical_Image_CINE_Viewer/blob/main/gif/drag-drop.gif)
 - Generate statistical reports (size, and correlation of variation)
+![Alt Text](https://github.com/loctran15/Medical_Image_CINE_Viewer/blob/main/gif/size-plot.gif)
 
 ## Getting Started
 
