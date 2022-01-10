@@ -1,5 +1,6 @@
 <h1>Medical Image CINE Viewer</h1>
-An application that displays 4D (3d + time) cardiac CT images and quickly shows statistical reports for analyzing heart movement over the period of time
+
+> An application that displays 4D (3d + time) cardiac CT images and quickly shows statistical reports for analyzing heart movement over the period of time.
 
 ## Built with
 - [Vispy](https://github.com/vispy/vispy): high-performance interactive 2D/3D data visualization library
