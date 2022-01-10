@@ -3,7 +3,7 @@ An application that displays 4D (3d + time) cardiac CT images and quickly shows 
 
 ## Built with
 - [Vispy](https://github.com/vispy/vispy)
-_ [Pyqt](https://www.riverbankcomputing.com/static/Docs/PyQt6/)
+_ [Pyqt](https://www.riverbankcomputing.com/static/Docs/PyQt6)
 
 ## Features
 
